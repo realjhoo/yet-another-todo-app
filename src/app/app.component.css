@@ -1,0 +1,42 @@
+.heading {
+  background-color: pink;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+}
+
+.new-todo {
+  width: 250px;
+  height: 30px;
+  font-size: 17px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  padding-left: 7px;
+  outline: none;
+}
+
+button {
+  margin: 10px;
+  padding: 6px 14px;
+  background-color: black;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+}
+.list-container {
+  background-color: lightblue;
+  width: 100%;
+  height: 400px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  background-color: grey;
+  margin: 5px;
+}
