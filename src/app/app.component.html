@@ -1,22 +1,26 @@
-<div class="heading">
-  <h2>Yet Another Todo App</h2>
-  <input
-    class="new-todo"
-    [(ngModel)]="name"
-    type="text"
-    placeholder="Add a Todo"
-    autofocus
-    #myInput
-  />
-  <button (click)="Add()">{{ addButton }}</button>
-</div>
+<div class="app-container">
+  <div class="header">
+    <h2 class="app-title">Yet Another Todo App</h2>
 
-<div class="list-container">
-  <ul>
-    <li *ngFor="let todo of todos; index as i">
-      <button (click)="Edit(todo.name, i)">Edit</button>
-      <button (click)="Delete(i)">Delete</button>
-      <span> {{ todo.name }} </span>
-    </li>
-  </ul>
+    <input
+      class="todo-input"
+      [(ngModel)]="name"
+      type="text"
+      placeholder="Add a Todo"
+      autofocus
+      #myInput
+    />
+
+    <button (click)="Add()">{{ addButton }}</button>
+  </div>
+
+  <div class="list-container">
+    <ul>
+      <li *ngFor="let todo of todos; index as i">
+        <button class="editButton" (click)="Edit(todo.name, i)">Edit</button>
+        <button class="deleteButton" (click)="Delete(i)">Delete</button>
+        <span> {{ todo.name }} </span>
+      </li>
+    </ul>
+  </div>
 </div>

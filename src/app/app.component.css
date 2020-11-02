@@ -1,42 +1,64 @@
-.heading {
-  background-color: pink;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  width: 100vw;
+  background-color: #a9a9a9;
+}
+
+.header {
+  background-color: #333;
   text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
-h2 {
-  color: blue;
+.app-title {
+  padding-bottom: 0.5rem;
+  color: #eff;
 }
 
-.new-todo {
+.todo-input {
   width: 250px;
-  height: 30px;
-  font-size: 17px;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  padding-left: 7px;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  padding-left: 0.5rem;
   outline: none;
 }
 
 button {
-  margin: 10px;
-  padding: 6px 14px;
-  background-color: black;
-  color: #fff;
-  border-radius: 30px;
+  margin: 0.5rem;
+  padding: 0.33rem 0.75rem;
+  background-color: #111;
+  color: #eff;
+  font-size: 1rem;
+  border-radius: 4px;
   cursor: pointer;
   outline: none;
 }
-.list-container {
-  background-color: lightblue;
-  width: 100%;
-  height: 400px;
+
+.deleteButton {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  color: orange;
 }
+
+.list-container {
+  background-color: #a9a9a9;
+  padding-bottom: 1px;
+}
+
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
+
 li {
-  background-color: grey;
-  margin: 5px;
+  background-color: #d3d3d3;
+  margin: 0.33rem;
+  font-size: 1.5rem;
 }
