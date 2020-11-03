@@ -11,6 +11,7 @@ import { Title } from '@angular/platform-browser';
 //
 export class AppComponent {
   @ViewChild('myInput') myInput: ElementRef;
+  // @ts-ignore
   todos: Todo = [];
   name = '';
   editState = false;
@@ -38,6 +39,7 @@ export class AppComponent {
         editState: this.editState,
       };
 
+      // @ts-ignore
       this.todos.splice(this.editIndex, 1, TodoList);
       this.addButton = 'Add';
       this.editState = false;
@@ -48,6 +50,7 @@ export class AppComponent {
         name: this.name,
         editState: this.editState,
       };
+      // @ts-ignore
       this.todos.splice(0, 0, TodosList);
       this.name = '';
     }
@@ -57,13 +60,14 @@ export class AppComponent {
 
   // ======================================================
   Delete(index: number) {
+    // @ts-ignore
     this.todos.splice(index, 1);
     this.name = '';
     this.setFocus();
   }
 
   // ======================================================
-  Edit(item: string, index: number) {
+  Edit(item: string, index) {
     this.editState = true;
     this.addButton = 'Update';
     this.name = item;
